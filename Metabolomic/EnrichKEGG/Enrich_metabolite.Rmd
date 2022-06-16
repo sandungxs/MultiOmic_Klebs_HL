@@ -1,0 +1,166 @@
+# Metabolomic Pathway Enrich Analysis
+
+During the master a software called [MetaboAnalyst](https://www.metaboanalyst.ca/MetaboAnalyst/ModuleView.xhtml) was teached and allows the user to do a **metabolite enrichment for KEGG pathways**. An enrichment for activated and repressed metabolites was performed using **Chlorella variabilis** metabolic pathways as an orthologue of *Klebsormidium nitens*. As there were few metabolites Fisher's test was employed and to know the importance of each node the betweeness metric was used.
+
+
+```{r echo=F,warning=F}
+# Necessary packages:
+library(ggplot2)
+library(MetBrewer)
+library(cowplot)
+library(plotly)
+library(ggrepel)
+
+
+# Enrichment for activated metabolites:
+pathway_results_act_chlo <- read.csv("Download_chlo_act/pathway_results.csv",header = T,sep = ",")
+# head(pathway_results_act_chlo)
+pathways_act_chlo <- pathway_results_act_chlo$X
+colnames(pathway_results_act_chlo)[1] <- "KEGG_Pathways"
+colnames(pathway_results_act_chlo)[6] <- "log10_p.value"
+rownames(pathway_results_act_chlo) <- pathways_act_chlo
+
+# Enrichment for repressed metabolites:
+pathway_results_rep_chlo <- read.csv("Download_rep_chlo/pathway_results.csv",header = T,sep = ",")
+# head(pathway_results_rep_chlo)
+pathways_rep_chlo <- pathway_results_rep_chlo$X
+colnames(pathway_results_rep_chlo)[1] <- "KEGG_Pathways"
+colnames(pathway_results_rep_chlo)[6] <- "log10_p.value"
+rownames(pathway_results_rep_chlo) <- pathways_rep_chlo
+
+```
+
+As a result it generates two tables: one with the conversions that the program needs to do called [name_map.csv](Download/name_map.csv) and another one with the data of the KEGG path enrichment called [pathway_results.csv](Download/pathway_results.csv). To visualize it, bubble plots were made showing the pvalue of each enriched pathway versus the impact exerted by that metabolite on that pathway.
+
+
+```{r warning=F,echo=F}
+
+# Plots title:
+
+a <- list(
+  text = "Enriquecimiento Metabolitos Activados CHLO", xref = "paper",yref = "paper",yanchor = "bottom", xanchor = "center",align = "center",x = 0.5,y = 1, showarrow = FALSE)
+
+b <- list(
+  text = "Enriquecimiento Metabolitos Reprimidos CHLO",xref = "paper",yref = "paper",yanchor = "bottom", xanchor = "center",align = "center",x = 0.5,y = 1, showarrow = FALSE)
+
+
+# Activated
+Activados_chlo <- ggplot(pathway_results_act_chlo, aes(x=Impact, y=log10_p.value, size = Hits, color=log10_p.value,
+                                         text= paste0("</br> KEGG: " ,KEGG_Pathways))) +
+  geom_point(alpha=0.7)+
+  geom_label_repel(aes(label = KEGG_Pathways),
+                  box.padding   = 0.35, 
+                  point.padding = 0.5,
+                  segment.color = 'grey50',
+                  size=5.5) +
+  scale_color_gradientn(colors = met.brewer("Gauguin",type = "continuous")) +
+  theme(panel.background = element_rect(fill = "white"),
+        panel.grid.major = element_line(colour = "white"),
+        panel.grid.minor = element_line(colour = "white"),
+        axis.line.x.bottom = element_line(color = 'black'),
+        axis.line.y.left   = element_line(color = 'black'),
+        panel.border = element_blank(),
+        plot.title = element_text(hjust = 0.5,size = 15),
+        axis.text=element_text(size=18),
+        axis.title=element_text(size=18,face="bold"))+
+  ylab("-log10(p.value)") +
+  xlab("Pathway impact value")
+
+
+ggsave2("Activados_met.png",width = 8,height = 8)
+
+
+Activados_plotly_chlo <- ggplotly(Activados_chlo,x = ~Impact, y = ~log10_p.value,
+                             tooltip = "text",
+                             width = 1100, height = 900)%>%
+               layout(annotations = a)
+
+# Repressed
+
+Reprimidos_chlo <- ggplot(pathway_results_rep_chlo, aes(x=Impact, y=log10_p.value, size = Hits, color=log10_p.value,
+                                              text= paste0("</br> KEGG: " ,KEGG_Pathways))) +
+  geom_point(alpha=0.7)+
+  geom_label_repel(aes(label = KEGG_Pathways),
+                  box.padding   = unit(0.35, "lines"), 
+                  point.padding = unit(0.5, "lines"),
+                  segment.color = 'grey50',
+                  size=5.5) +
+  scale_color_gradientn(colors = met.brewer("Gauguin",type = "continuous")) +
+  theme(panel.background = element_rect(fill = "white"),
+        panel.grid.major = element_line(colour = "white"),
+        panel.grid.minor = element_line(colour = "white"),
+        axis.line.x.bottom = element_line(color = 'black'),
+        axis.line.y.left   = element_line(color = 'black'),
+        panel.border = element_blank(),
+        plot.title = element_text(hjust = 0.5,size = 15),
+        axis.text=element_text(size=18),
+        axis.title=element_text(size=18,face="bold"))+
+  ylab("-log10(p.value)") +
+  xlab("Pathway impact value")
+
+ggsave2("Reprimidos_met.png",width = 8,height = 8)
+
+
+Reprimidos_plotly_chlo <-ggplotly(Reprimidos_chlo,x = ~Impact, y = ~log10_p.value,
+                             tooltip = "text",
+                             width = 1100, height = 900)%>%
+               layout(annotations = b)
+
+
+
+# Static Bubbleplot
+plot_grid(Activados_chlo,Reprimidos_chlo, nrow = 1, ncol = 2,align = "hv")
+ggsave2("Enrichment.png",width = 25,height = 10)
+
+
+# Interactive Bubbleplot
+
+Enrich_interac <-subplot(Activados_plotly_chlo, Reprimidos_plotly_chlo ,titleX = T,titleY = T, margin = 0.1, nrows=1) 
+htmlwidgets::saveWidget(as_widget(Enrich_interac), "Enrich_metabolite_interactive.html",selfcontained = T)
+
+
+```
+
+Barplots similar to clusterprofiler packages results were made.
+
+```{r warning=F,echo=F}
+# More relevatn pathways (more than 2 metabolites per pathway):
+
+dim(pathway_results_act_chlo)
+reduced_act_chlo <-pathway_results_act_chlo[pathway_results_act_chlo$Hits >= 2,]
+dim(reduced_act_chlo)
+head(reduced_act_chlo)
+
+dim(pathway_results_rep_chlo)
+reduced_rep_chlo<-pathway_results_rep_chlo[pathway_results_rep_chlo$Hits >= 2,]
+dim(reduced_rep_chlo)
+head(reduced_rep_chlo)
+
+# Activados CHLO
+Bar_Act_CHLO <- ggplot(reduced_act_chlo, aes(x=reorder(KEGG_Pathways,-log10_p.value), y=Hits, fill=log10_p.value)) + 
+  geom_bar(stat = "identity") +
+  # scale_fill_gradientn(colors = met.brewer("OKeeffe2",9))+
+  scale_fill_continuous(low="red", high="blue",
+                                  guide=guide_colorbar(reverse=TRUE))+
+  coord_flip()+
+  xlab(NULL) +
+  ylab(NULL)+
+  ggtitle("Activated Metabolite Enrichment")
+
+# Reprimidos CHLO
+Bar_Rep_CHLO <- ggplot(reduced_rep_chlo, aes(x=reorder(KEGG_Pathways,-log10_p.value), y=Hits, fill=log10_p.value)) + 
+  geom_bar(stat = "identity") +
+  # scale_fill_gradientn(colors = met.brewer("OKeeffe2",9))+
+  scale_fill_continuous(low="red", high="blue",
+                                  guide=guide_colorbar(reverse=TRUE))+
+  coord_flip()+
+  xlab(NULL) +
+  ylab(NULL)+
+  ggtitle("Repressed metabolite Enrichment")
+
+# Estaticos Barplot
+plot_grid(Bar_Act_CHLO,Bar_Rep_CHLO, nrow = 1, ncol = 2)
+ggsave2("Barplots_Tartita.png",width = 15,height = 5)
+
+```
+
