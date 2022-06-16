@@ -58,5 +58,5 @@ For support, email emma.serrano.perez.99@gmail.com or fran@us.es.
 
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&style=social&logo=instagram&logoColor=white)](https://www.instagram.com/greennetworks/?hl=es)
 
-[![Twitter](https://img.shields.io/badge/twitter/url?url=https%3A%2F%2Fshields.io)](https://twitter.com/fran_rom_cam?lang=es)
+[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fshields.io)](https://twitter.com/fran_rom_cam?lang=es)
 
