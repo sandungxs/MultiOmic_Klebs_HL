@@ -2,7 +2,7 @@
 
 ![Klebs](https://github.com/sandungxs/MultiOmic_Klebs_HL/blob/main/ReadmeFiles/optico-git.png)
 
-[!DOI](https://www.frontiersin.org/articles/10.3389/fpls.2022.855243/full) [![Project Status: Active - The project has reached a stable, usable
+[![DOI](http://img.shields.io/badge/DOI-10.3389/fpls.2022.855243-B31B1B.svg)](https://doi.org/10.3389/fpls.2022.855243) [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
