@@ -1,5 +1,16 @@
 # Transcriptomic and Metabolomic Response to High Light in the Charophyte Alga *Klebsormidium nitens*.
 
+## Authors
+
+- [@sandungxs](https://github.com/sandungxs)
+- [@fran-romero-campero](https://github.com/fran-romero-campero)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Summary
+
 This repository contains all the bioinformatics codes used for the realization of the TFM: **Transcriptomic and Metabolomic Response to High Light in the Charophyte Alga Klebsormidium nitens.**. They are mainly divided into two blocks according to the omics under study and the biological validation used:
 
 - **Transcriptomic**. This folder contains all the analyses related to the study of *Klebsormidium nitens* RNA under high light (HL) stress. These include:
