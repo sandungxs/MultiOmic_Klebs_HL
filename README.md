@@ -1,11 +1,9 @@
 # Transcriptomic and Metabolomic Response to High Light in the Charophyte Alga *Klebsormidium nitens*.
 
-![Klebs](https://github.com/sandungxs/MultiOmic_Klebs_HL/blob/main/ReadmeFiles/optico-git.png)
-
 ## Authors
 
-- [@sandungxs](https://github.com/sandungxs)
-- [@fran-romero-campero](https://github.com/fran-romero-campero)
+- Emma Serrano-Pérez [@sandungxs](https://github.com/sandungxs)
+- Francisco J. Romero-Campero [@fran-romero-campero](https://github.com/fran-romero-campero)
 
 ## License
 
@@ -46,3 +44,5 @@ This repository contains all the bioinformatics codes used for the realization o
   - **Cell_Elongation**. Cell size measured with the software ImageJ in confocal microscopy images for each condition.
   
   - **PAM**. Chlorophyll fluorescence measured by Pulse-Amplitude-Modulation (PAM) Fluorometry for each condition.
+
+![Klebs](https://github.com/sandungxs/MultiOmic_Klebs_HL/blob/main/ReadmeFiles/optico-git.png)
