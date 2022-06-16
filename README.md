@@ -19,7 +19,7 @@ This repository contains all the bioinformatics codes used for the realization o
 
   - **Downstream_analysis**. Downstream metabolomic pipeline including global metabolomic statistics, differential metabolite abundance analysis and a specific metabolite analysis for interesting pathways.
   -
-  - **EnrichKEGG**.
+  - **EnrichKEGG**. KEGG pathways enrichment for activated and repressed metabolites based on *Chlorella variabilis* orthology.
 
 - **Molecular_Biology_Validation**.
 
