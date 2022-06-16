@@ -1,5 +1,8 @@
 # Transcriptomic and Metabolomic Response to High Light in the Charophyte Alga *Klebsormidium nitens*.
 
+![Klebs](https://github.com/sandungxs/MultiOmic_Klebs_HL/blob/main/ReadmeFiles/optico-git.png)
+
+
 ## Authors
 
 - Emma Serrano-Pérez [@sandungxs](https://github.com/sandungxs)
