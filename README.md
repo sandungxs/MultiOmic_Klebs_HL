@@ -12,7 +12,7 @@ This repository contains all the bioinformatics codes used for the realization o
 
   - **Saturation_Study**. To demonstrate that using 2 replicates in this RNAseq study was sufficient, a saturation study was performed for both genome coverage and DEGs starting from different numbers of reads. In addition, a saturation study performed on an analogous *K. nitens* study performed with 3 replicates was included.
 
-  - **Streptophyte_Unique_Genes**.
+  - **Streptophyte_Unique_Genes**. To determine the set of *K.nitens* genes that are unique to Streptophyta, an orthology study was performed using various plant species and sequence similarity tools such as BLAST.
 
 
 - **Metabolomic**.
