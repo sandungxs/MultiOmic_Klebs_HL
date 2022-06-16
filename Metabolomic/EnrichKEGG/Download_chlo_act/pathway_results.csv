@@ -1,0 +1,19 @@
+"","Total","Expected","Hits","Raw p","-log10(p)","Holm adjust","FDR","Impact"
+"Carotenoid biosynthesis",35,0.36713,3,0.0047809,2.3205,0.40159,0.40159,0.08196
+"Aminoacyl-tRNA biosynthesis",48,0.5035,3,0.011686,1.9323,0.96997,0.43564,0
+"Citrate cycle (TCA cycle)",20,0.20979,2,0.017263,1.7629,1,0.43564,0.09129
+"Phenylalanine, tyrosine and tryptophan biosynthesis",22,0.23077,2,0.020745,1.6831,1,0.43564,0
+"Tryptophan metabolism",28,0.29371,2,0.032777,1.4844,1,0.55065,0.25
+"Tropane, piperidine and pyridine alkaloid biosynthesis",4,0.041958,1,0.041356,1.3835,1,0.57898,0
+"Phenylalanine metabolism",7,0.073427,1,0.071337,1.1467,1,0.85605,0.375
+"Sulfur metabolism",14,0.14685,1,0.13798,0.86018,1,1,0.03548
+"Arginine biosynthesis",17,0.17832,1,0.16518,0.78205,1,1,0
+"Histidine metabolism",18,0.18881,1,0.17407,0.75929,1,1,0.09651
+"Alanine, aspartate and glutamate metabolism",20,0.20979,1,0.19158,0.71764,1,1,0.09195
+"Propanoate metabolism",21,0.22028,1,0.20022,0.6985,1,1,0
+"Starch and sucrose metabolism",21,0.22028,1,0.20022,0.6985,1,1,0.0025
+"Glycine, serine and threonine metabolism",28,0.29371,1,0.25831,0.58787,1,1,0
+"Glyoxylate and dicarboxylate metabolism",31,0.32517,1,0.282,0.54976,1,1,0.05156
+"Amino sugar and nucleotide sugar metabolism",41,0.43007,1,0.35604,0.4485,1,1,0
+"Porphyrin and chlorophyll metabolism",54,0.56643,1,0.44184,0.35473,1,1,0.01914
+"Purine metabolism",65,0.68182,1,0.50612,0.29575,1,1,0.0766
