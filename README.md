@@ -10,7 +10,7 @@ developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repo
 ## Authors
 
 - Emma Serrano-Pérez [@sandungxs](https://github.com/sandungxs)
-- Directed by Francisco J. Romero-Campero [@fran-romero-campero](https://github.com/fran-romero-campero)
+- Corresponsal, Francisco J. Romero-Campero [@fran-romero-campero](https://github.com/fran-romero-campero)
 
 ## License
 
