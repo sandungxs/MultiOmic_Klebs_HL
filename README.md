@@ -6,7 +6,7 @@
 ## Authors
 
 - Emma Serrano-Pérez [@sandungxs](https://github.com/sandungxs)
-- Francisco J. Romero-Campero [@fran-romero-campero](https://github.com/fran-romero-campero)
+- Directed by Francisco J. Romero-Campero [@fran-romero-campero](https://github.com/fran-romero-campero)
 
 ## License
 
