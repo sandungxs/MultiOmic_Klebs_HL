@@ -45,4 +45,3 @@ This repository contains all the bioinformatics codes used for the realization o
   
   - **PAM**. Chlorophyll fluorescence measured by Pulse-Amplitude-Modulation (PAM) Fluorometry for each condition.
 
-![Klebs](https://github.com/sandungxs/MultiOmic_Klebs_HL/blob/main/ReadmeFiles/optico-git.png)
