@@ -8,7 +8,8 @@
 ## License
 
 [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://choosealicense.com/licenses/gpl-3.0/)
 
 
 ## Summary
@@ -46,4 +47,13 @@ This repository contains all the bioinformatics codes used for the realization o
   - **Cell_Elongation**. Cell size measured with the software ImageJ in confocal microscopy images for each condition.
   
   - **PAM**. Chlorophyll fluorescence measured by Pulse-Amplitude-Modulation (PAM) Fluorometry for each condition.
+
+## Support and connection:
+
+For support, email emma.serrano.perez.99@gmail.com or fran@us.es.
+
+🔵 **Connect with us:**
+
+[![YouTube](https://img.shields.io/youtube/channel/subscribers/:channelId)](https://www.youtube.com/channel/UCRBDDVQHHisLcZtLPlYvmow)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&style=social&logo=instagram&logoColor=white)](https://www.instagram.com/greennetworks/?hl=es)
 
