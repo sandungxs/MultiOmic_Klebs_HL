@@ -10,7 +10,7 @@ This repository contains all the bioinformatics codes used for the realization o
 
   - **EnrichGO**. GO term enrichment for activated and repressed genes based on *Arabidopsis thaliana* orthology.
 
-  - **Saturation_Study**.
+  - **Saturation_Study**. To demonstrate that using 2 replicates in this RNAseq study was sufficient, a saturation study was performed for both genome coverage and DEGs starting from different numbers of reads. In addition, a saturation study performed on an analogous *K. nitens* study performed with 3 replicates was included.
 
   - **Streptophyte_Unique_Genes**.
 
