@@ -21,6 +21,9 @@ This repository contains all the bioinformatics codes used for the realization o
   
   - **EnrichKEGG**. KEGG pathways enrichment for activated and repressed metabolites based on *Chlorella variabilis* orthology.
 
+
 - **Molecular_Biology_Validation**.
 
-  - **Cell_Elongation**.
+  - **Cell_Elongation**. Cell size measured with the software ImageJ in confocal microscopy images for each condition.
+  
+  - **PAM**. Chlorophyll fluorescence measured by Pulse-Amplitude-Modulation (PAM) Fluorometry for each condition.
